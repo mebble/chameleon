@@ -84,3 +84,13 @@ test('multiple matches in single span', async () => {
     expect(indexes).toEqual([1, 4])
 })
 
+test('multiple matches in single span', async () => {
+    const { user, element } = setup('<span>xabcxxxxxxabcxxxx</span>');
+    await highlight(user, element, 10, 13)
+
+    const selection = document.getSelection()!;
+    const indexes = selectionIndexes(selection, element);
+
+    expect(selection.toString()).toEqual('abc')
+    expect(indexes).toEqual([10, 13])
+})

@@ -1,5 +1,4 @@
 Scaffolded with `npx degit solidjs/templates/ts-tailwindcss chameleon` from [solidjs/templates](https://github.com/solidjs/templates).
-`
 
 ---
 
